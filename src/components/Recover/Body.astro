@@ -1,0 +1,35 @@
+<main class="flex items-center justify-center mt-[100px]">
+    <figure class="border border-gray-300 flex flex-col h-[600px] items-center justify-center text-center w-[390px] mt-1 rounded-sm -ml-[15px] py-6 px-[40px]">
+        <img src="/lock.svg" alt="" class="w-[100px]">
+        <h1 class="font-bold text-[17px] -mt-4 leading-5">¿Tienes problemas para iniciar sesión?</h1>
+        <p class="text-[14px] leading-4 text-gray-500 mt-2">Ingresa tu correo electrónico, teléfono o nombre de usuario y te enviaremos un enlace para que recuperes el acceso a tu cuenta.</p>
+        <input type="text" name="" class="border border-gray-300 placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-500 w-[300px] mt-3 px-2 py-2 rounded-md" placeholder="Correo electrónico, teléfono o usuario" autocomplete="off" id="input-recover">
+        <button class="bg-[#0095f6] text-white font-bold px-[39px] py-[5px] mt-4 rounded-[8px] text-[14px] hover:bg-blue-600 disabled:bg-[#b3dffd] disabled:text-[#d0ecfc]" id="btn-recover" disabled>Enviar enlace de inicio de sesión</button>
+            <a href="" class="text-center text-[#456d93] tracking-tighter text-[13px] mt-3">¿No puedes restablecer la contraseña?</a>
+            <div class="flex mt-10">
+                <div class="bg-gray-300 h-[1px] w-[110px]"></div>
+                <p class="-mt-2 text-[13px] text-[#848687] font-bold mx-5">O</p>
+                <div class="bg-gray-300 h-[1px] w-[110px]"></div>
+            </div>
+            <a href="" class="text-center font-semibold mt-3 text-[14px] hover:text-gray-400">Crear cuenta nueva</a>
+            <div class=" bg-gray-300 w-[390px] h-[1px] mt-[75px]"></div>
+            <a href="/" class="mt-6 hover:text-gray-400 font-bold">Volver al inicio de sesión</a>
+    </figure>
+</main>
+
+<script>
+    const inputRecover = document.querySelector<HTMLInputElement>('#input-recover');
+    const buttonRecover = document.querySelector<HTMLButtonElement>('#btn-recover');
+    
+    inputRecover?.addEventListener('keyup', () => {
+        const inputValue = inputRecover.value;
+        const inputLength = inputValue.length
+
+        if(inputLength >= 1){
+            buttonRecover?.removeAttribute('disabled')
+        } else {
+            buttonRecover?.setAttribute('disabled', 'true');
+        }
+    })
+
+</script>
