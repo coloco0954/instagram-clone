@@ -1,0 +1,30 @@
+---
+const footerElements = [
+    "Meta",
+    "Información",
+    "Blog",
+    "Empleo",
+    "Ayuda",
+    "API",
+    "Privacidad",
+    "Configuración de cookies",
+    "Condiciones",
+    "Ubicaciones",
+    "Instagram Lite",
+    "Threads",
+    "Subir contactos y no usuarios",
+    "Meta Verified",
+    "Español",
+    "© 2024 Instagram from Meta",
+];
+---
+
+<footer class="w-full px-[140px] py-3 mt-[70px] mb-[70px]">
+    <div class="flex flex-wrap items-center justify-center gap-[15px]">
+        {
+            footerElements.map(element => {
+                return <a href="" class="text-[13px] tracking-tighter text-zinc-500 hover:underline">{element}</a>
+            })
+        }
+    </div>
+</footer>
